@@ -266,7 +266,7 @@ module.exports = {
             SELECT city_id.name AS city, country_id.name AS country
             FROM countries
             JOIN cities
-            ON city.city_id = country.country_id
+            ON city.country_id = country.country_id
         `)
         .then((dbRes) => {
             res.status(200).send(dbRes[0])
